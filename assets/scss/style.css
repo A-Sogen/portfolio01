@@ -1,5 +1,212 @@
-/*# sourceMappingURL=style.css.map */
-.p-headerLogo {
-  height: 44px;
-  width: 60px;
+body {
+  margin: 10px 20px;
+  font-family: source-han-serif-japanese, serif;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
+
+body.is-show {
+  opacity: 1;
+}
+
+.l-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.p-headerWrap {
+  display: flex;
+}
+
+.p-headerLogo {
+  height: 75.7778px;
+  width: 104.194px;
+}
+
+.c-headerLogo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.c-text--header {
+  padding-left: 30px;
+  font-size: 12.6479px;
+}
+.c-text--default {
+  display: block;
+}
+.c-text--hover {
+  position: absolute;
+}
+.c-text--title {
+  color: grey;
+  font-size: 19.9681px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.p-headerMenu {
+  display: flex;
+}
+.p-headerMenu--body {
+  transition: 0.3s;
+  position: fixed;
+  top: 10px;
+  right: 0;
+  background: #fff;
+  transform: translateX(100%);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  border: solid 1px #333;
+  border-radius: 5px;
+  width: 668.194px;
+}
+.p-headerMenu--body.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+.p-headerMenu--container {
+  padding: 10px;
+}
+.p-headerMenu--main {
+  padding: 40px 0;
+}
+.p-headerMenu--label {
+  width: 100%;
+  display: block;
+  justify-content: center;
+}
+
+.p-navList {
+  padding-right: 10px;
+}
+
+.c-listItem {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.c-btn--item {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  outline: none;
+  font-size: 15px;
+  padding-left: 5px;
+}
+.c-btn--itemText {
+  display: inline-block;
+  position: relative;
+}
+
+.c-img--logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5 15px;
+  width: 300px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #fff;
+}
+
+.c-arrow {
+  width: 15px;
+  height: 15px;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateX(-10px);
+}
+
+.c-btn--item:hover .c-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.c-menu {
+  display: inline-block;
+  overflow: hidden;
+}
+.c-menu--side {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.c-menu--default {
+  display: block;
+  font-size: 10px;
+}
+.c-menu--hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s;
+  font-size: 10px;
+}
+
+.c-menuText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  font-size: 10px;
+  background-color: #333;
+  border-radius: 20px;
+  width: 40px;
+  height: 20px;
+  z-index: 1000;
+}
+
+.c-menuText span,
+.c-menu--side span {
+  display: block;
+  transition: 0.3s;
+}
+
+.c-menuText .c-text--hover,
+.c-menu--side .c-menu--hover {
+  transform: translateY(100%);
+}
+
+.c-menu:hover .c-text--default,
+.c-menu:hover .c-menu--default {
+  transform: translateY(-100%);
+}
+
+.c-menu:hover .c-text--hover,
+.c-menu:hover .c-menu--hover {
+  transform: translateY(0);
+}
+
+.c-line {
+  position: relative;
+  text-align: center;
+}
+
+.c-line::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: grey;
+}/*# sourceMappingURL=style.css.map */
