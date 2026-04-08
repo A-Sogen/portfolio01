@@ -72,7 +72,7 @@ body.is-show {
     pointer-events: none;
     border: solid 1px #333;
     border-radius: 5px;
-    width: 668.194px;
+    width: 500px;
   }
 
   &--body.is-open {
@@ -82,7 +82,7 @@ body.is-show {
   }
 
   &--container {
-    padding: 10px;
+    padding: 32.1667px;
   }
 
   &--main {
@@ -93,6 +93,13 @@ body.is-show {
     width: 100%;
     display: block;
     justify-content: center;
+  }
+
+  &--content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    align-items: center;
   }
 }
 
@@ -122,6 +129,20 @@ body.is-show {
     display: inline-block;
     position: relative;
   }
+
+  &--sideItem {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  &--sideText {
+    display: inline-block;
+    position: relative;
+    padding: 0 10px 0 30px;
+    font-size: 20px;
+  }
 }
 
 .c-img {
@@ -144,9 +165,18 @@ body.is-show {
   opacity: 0;
   transition: 0.3s;
   transform: translateX(-10px);
+
+  &--sideMenu {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    transition: 0.3s;
+    transform: translateX(-10px);
+  }
 }
 
-.c-btn--item:hover .c-arrow {
+.c-btn--item:hover .c-arrow,
+.c-btn--sideItem:hover .c-arrow--sideMenu {
   opacity: 1;
   transform: translateX(0);
 }
@@ -163,7 +193,7 @@ body.is-show {
 
   &--default {
     display: block;
-    font-size: 10px;
+    font-size: 20px;
   }
 
   &--hover {
@@ -172,7 +202,7 @@ body.is-show {
     left: 0;
     width: 100%;
     transition: transform 0.3s;
-    font-size: 10px;
+    font-size: 20px;
   }
 }
 
