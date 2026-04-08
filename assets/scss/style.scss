@@ -53,7 +53,11 @@ body.is-show {
     color: grey;
     font-size: 19.9681px;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 20px;
+
+    &--large {
+      padding-top: 30px;
+    }
   }
 }
 
@@ -87,6 +91,10 @@ body.is-show {
 
   &--main {
     padding: 40px 0;
+  }
+
+  &--section {
+    padding: 20px 0;
   }
 
   &--label {
@@ -135,27 +143,37 @@ body.is-show {
     display: flex;
     align-items: center;
     padding-bottom: 10px;
+
+    &--center {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   &--sideText {
     display: inline-block;
     position: relative;
     padding: 0 10px 0 30px;
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
 .c-img {
-  &--logo {
+  &--side {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 5 15px;
-    width: 300px;
-    height: auto;
-    object-fit: contain;
+    width: auto;
+    height: 30px;
+    padding: 0 15px;
+    background-size: contain;
     background-color: #fff;
+
+    &--large {
+      height: 60px;
+    }
   }
 }
 
