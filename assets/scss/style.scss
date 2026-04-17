@@ -71,6 +71,40 @@ body.is-show {
   &--ContentsTitle {
     font-size: 15px;
   }
+
+  &--section {
+    width: 300px;
+    padding: 50px 0;
+    text-align: left;
+    gap: 10px;
+  }
+
+  &--sectionLine {
+    padding-bottom: 10px;
+  }
+
+  &--sectionTitle {
+    padding-top: 15px;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  &--schedule {
+    padding-top: 15px;
+    font-size: 15px;
+    text-align: left;
+    color: gray;
+  }
+
+  &--concept {
+    text-align: left;
+    font-size: 30px;
+    padding-right: 10px;
+  }
+
+  &--conceptNumber {
+    font-size: 13px;
+  }
 }
 
 .p-headerMenu {
@@ -232,6 +266,35 @@ body.is-show {
     width: 30px;
     object-fit: cover;
   }
+
+  &--section {
+    max-width: 300px;
+  }
+
+  &--event {
+    width: 366px;
+    height: 366px;
+    object-fit: contain;
+  }
+
+  &--concept {
+    width: 800px;
+    height: 800px;
+    object-fit: cover;
+    position: relative;
+    left: -30px;
+
+    &--right {
+      left: auto;
+      right: -30px;
+    }
+  }
+
+  &--viewport {
+    width: 300px;
+    height: 400px;
+    object-fit: contain;
+  }
 }
 
 .c-arrow {
@@ -248,11 +311,22 @@ body.is-show {
     transition: 0.3s;
     transform: translateX(-10px);
   }
+
+  &--event {
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    transition: 0.3s;
+    transform: translateX(-10px);
+    display: block;
+    align-items: flex-start;
+  }
 }
 
 .c-btn--item:hover .c-arrow,
 .c-btn--sideItem:hover .c-arrow--sideMenu,
-.c-topic:hover .c-arrow {
+.c-topic:hover .c-arrow,
+.c-btn--event:hover .c-arrow--event {
   opacity: 1;
   transform: translateX(0);
 }
@@ -429,18 +503,54 @@ body.is-show {
 }
 
 .p-section {
-  margin-top: 60px;
+  margin: 200px 30px;
+  border-top: gray 1px solid;
 
   &--wrap {
-    margin: 200px 30px;
-    border-top: gray 1px solid;
-    border-bottom: gray 1px solid;
+    margin: 60px 0 100px;
   }
 
-  &--text {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    &--right {
+      align-items: flex-end;
+    }
+  }
+
+  &__event {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__eventContents {
+    width: 366px;
+  }
+
+  &__concept {
+    display: flex;
+  }
+
+  &--textBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    writing-mode: vertical-rl;
+    padding-left: 50px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
   }
 }
 
@@ -448,4 +558,26 @@ body.is-show {
   display: flex;
   align-items: center;
   padding-top: 25px;
+
+  &--right {
+    justify-content: flex-end;
+  }
+}
+
+.p-tagList {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 250px
+}
+
+.p-tagList li {
+  border: gray  1px solid;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  height: 25px;
 }
