@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: source-han-serif-japanese, serif;
   opacity: 0;
@@ -75,7 +81,10 @@ body.is-show {
   &--section {
     padding: 50px 0;
     text-align: left;
-    gap: 10px;
+
+    &--plan {
+      padding: 120px 0 50px;
+    }
   }
 
   &--sectionLine {
@@ -120,6 +129,16 @@ body.is-show {
     padding-top: 30px;
     font-size: 35px;
   }
+
+  &--subHero {
+    color: #fff;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -30%);
+  }
 }
 
 .u-marginLeft {
@@ -141,7 +160,7 @@ body.is-show {
     pointer-events: none;
     border: solid 1px #333;
     border-radius: 5px;
-    width: 500px;
+    width: 450px;
   }
 
   &--body.is-open {
@@ -151,7 +170,7 @@ body.is-show {
   }
 
   &--container {
-    padding: 32.1667px;
+    padding: 30px;
   }
 
   &--main {
@@ -160,6 +179,10 @@ body.is-show {
 
   &--section {
     padding: 20px 0;
+  }
+
+  &--section:last-child {
+    padding: 20px 0 0;
   }
 
   &--label {
@@ -247,9 +270,10 @@ body.is-show {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 60px;
+    width: 170px;
+    height: 50px;
     border: grey 3px double;
+    flex-shrink: 0;
   }
 
   &--about {
@@ -374,10 +398,14 @@ body.is-show {
     padding-top: 25px;
   }
 
-  &--columnImage{
+  &--columnImage {
     width: 100%;
     object-fit: contain;
   }
+}
+
+.p-subHero {
+  position: relative;
 }
 
 .c-arrow {
@@ -575,7 +603,7 @@ body.is-show {
   margin: 200px 40px;
   border-top: #ccc 1px solid;
 
-  &__column {
+  &__columnList {
     margin: 200px 0;
     border-top: none;
     position: relative;
@@ -591,22 +619,22 @@ body.is-show {
   }
 
   &__text {
-    max-width: 350px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    max-width: 350px;
 
     &--right {
       align-items: flex-end;
     }
   }
 
-  &__event {
+  &__contentsWrap {
     display: flex;
     gap: 15px;
   }
 
-  &__eventContents {
+  &__content {
     max-width: 420px;
     width: 100%;
   }
@@ -717,7 +745,7 @@ body.is-show {
   z-index: 2;
 }
 
-.p-column {
+.p-twoColumn {
   width: 100%;
   display: flex;
   position: relative;
@@ -766,17 +794,24 @@ body.is-show {
 
   &__buttons {
     padding-top: 30px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
     gap: 10px;
+    max-width: 650px;
+    margin: 0 auto;
+    justify-content: center;
   }
 }
 
-.p-column__item:first-child {
+.p-twoColumn__item:first-child {
   border-right: 1px solid #ccc;
 }
 
 .p-plan {
   margin: 0 40px;
+}
+
+.p-buttonWrap {
+  display: flex;
+  gap: 10px;
 }
