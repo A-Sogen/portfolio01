@@ -121,6 +121,16 @@ body.is-show {
   top: 30%;
   transform: translate(-50%, -30%);
 }
+.c-text--label {
+  width: 40%;
+}
+.c-text--detail {
+  width: 60%;
+}
+.c-text--label, .c-text--detail {
+  font-weight: 500;
+  text-align: left;
+}
 
 .u-marginLeft {
   margin-left: auto;
@@ -713,9 +723,21 @@ body.is-show {
   margin: 0 auto;
   justify-content: center;
 }
+.p-twoColumn__information {
+  padding-top: 25px;
+}
+.p-twoColumn__contents {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 20px;
+}
 
 .p-twoColumn__item:first-child {
   border-right: 1px solid #ccc;
+}
+
+.p-twoColumn__contents:first-child {
+  padding-top: 0;
 }
 
 .p-plan {
