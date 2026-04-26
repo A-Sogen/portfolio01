@@ -1,0 +1,38 @@
+.c-topic {
+  display: flex;
+  padding: 20px 30px;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  position: relative;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    width: 80px;
+    height: 80px;
+  }
+
+  &__text {
+    padding-left: 30px;
+  }
+
+  &__row--top {
+    display: flex;
+    padding-bottom: 10px;
+    gap: 10px;
+  }
+
+  &__information {
+    border: gray 1px solid;
+    border-radius: 20px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
