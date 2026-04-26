@@ -13,7 +13,7 @@
       <div class="p-headerWrap">
         <div class="p-headerLogo">
           <a class="c-link" href="../index.html">
-            <img class="c-headerLogo" src="assets/image/logo.png" alt="ヘッダーロゴ">
+            <img class="c-img--headerLogo" src="assets/image/logo.png" alt="ヘッダーロゴ">
           </a>
         </div>
         <p class="c-text--header">沖縄の海と空を見渡すウェディングのための<br>祝福空間で唯一無二の体験を</p>
@@ -32,10 +32,16 @@
             <a class="c-btn--item" href="#"><span class="c-btn--itemText">CAFEのご利用</span><img class="c-arrow" src="assets/image/arrow.png" alt="矢印"></a>
           </div>
         </div>
-        <a class="c-menu" href="#">
+        <a class="c-menu js-menuToggle" href="#">
           <span class="c-menuText">
-            <span class="c-text--default">MENU</span>
-            <span class="c-text--hover">MENU</span>
+            <span class="c-menuLabel c-menuLabel--menu"><!-- MENU -->
+              <span class="c-text--default">MENU</span>
+              <span class="c-text--hover">MENU</span>
+            </span>
+            <span class="c-menuLabel c-menuLabel--close"><!-- CLOSE -->
+              <span class="c-text--default">CLOSE</span>
+              <span class="c-text--hover">CLOSE</span>
+            </span>
           </span>
         </a>
         <nav class="p-headerMenu--body">
@@ -529,26 +535,33 @@
             </div>
           </div>
         </div>
-        <div class="p-twoColumn">
+        <div class=""
+        <div class="p-twoColumn"><!-- アクセスとお問い合わせ-->
           <div class="p-twoColumn__item"><!-- ACCESS-->
             <div class="p-twoColumn__title">
               <img class="c-img--flower" src="assets/image/flower.png" alt="花">アクセス
             </div>
             <img class="c-img--columnTitle" src="assets/image/ACCESS.png" alt="アクセス">
             <div class="p-twoColumn__body">
-              <img class="c-img--columnImage" src="assets/image/map.png" alt="マップ">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.899816728952!2d139.73309907623116!3d35.67946873007012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c7c3e44d54f%3A0xc877ded5863f434f!2z44OL44Ol44O844Kq44O844K_44OLIOOCrOODvOODh-ODs-OCs-ODvOODiA!5e0!3m2!1sja!2sjp!4v1777103387029!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               <div class="p-twoColumn__information">
                 <div class="p-twoColumn__contents">
                   <p class="c-text--label">住所</p>
-                  <p class="c-text--detail">〒123-4567<br>沖縄県那覇市那覇1-2-3</p>
+                  <div class="p-twoColumn__tel">
+                    <p class="c-text--detail">〒123-4567<br>沖縄県那覇市那覇1-2-3</p>
+                  </div>
                 </div>
                 <div class="p-twoColumn__contents">
                   <p class="c-text--label">ゆいレールを<br>ご利用の場合</p>
-                  <p class="c-text--detail">ゆいレール那覇駅より徒歩10分</p>
+                  <div class="p-twoColumn__tel">
+                    <p class="c-text--detail">ゆいレール那覇駅より徒歩10分</p>
+                  </div>
                 </div>
                 <div class="p-twoColumn__contents">
                   <p class="c-text--label">自動車を<br>ご利用の場合</p>
-                  <p class="c-text--detail">沖縄バイパス那覇出口 出口より約5分<br>※那覇空港からの無料送迎バス運行あり（挙式当日、ご参列者様向け）</p>
+                  <div class="p-twoColumn__tel">
+                    <p class="c-text--detail">沖縄バイパス那覇出口 出口より約5分<br>※那覇空港からの無料送迎バス運行あり（挙式当日、ご参列者様向け）</p>
+                  </div>
                 </div>
               </div>
               <div class="p-twoColumn__buttons">
@@ -571,24 +584,31 @@
               <div class="p-twoColumn__information">
                 <div class="p-twoColumn__contents">
                   <p class="c-text--label">ブライダルフェア・<br>見学ご希望のお客様</p>
-                  
-                  <p class="c-text--detail">TEL:0120-12-3456</p>
-
+                  <div class="p-twoColumn__tel">
+                    <p class="c-text--telNumber">TEL:0120-12-3456</p>
+                    <p class="c-text--detail">平日 11:00~18:00／土日祝 10:00~19:00／無休</p>
+                  </div>
                 </div>
                 <div class="p-twoColumn__contents">
-                  <p class="c-text--label">ゆいレールを<br>ご利用の場合</p>
-                  <p class="c-text--detail">ゆいレール那覇駅より徒歩10分</p>
+                  <p class="c-text--label">ウェディング、<br>その他のお問い合わせ</p>
+                  <div class="p-twoColumn__tel">
+                    <p class="c-text--telNumber">TEL:0120-1111-1111</p>
+                    <p class="c-text--detail">平日 11:00~18:00／土日祝 10:00~18:00／水曜定休 ※祝日除く</p>
+                  </div>
                 </div>
                 <div class="p-twoColumn__contents">
-                  <p class="c-text--label">自動車を<br>ご利用の場合</p>
-                  <p class="c-text--detail">沖縄バイパス那覇出口 出口より約5分<br>※那覇空港からの無料送迎バス運行あり（挙式当日、ご参列者様向け）</p>
+                  <p class="c-text--label">宴会・イベント・<br>会議等のお問い合わせ</p>
+                  <div class="p-twoColumn__tel">
+                    <p class="c-text--telNumber">TEL:0120-23-4567</p>
+                    <p class="c-text--detail">平日・土日祝 11:00~19:00／水曜定休 ※祝日除く</p>
+                  </div>
                 </div>
               </div>
               <div class="p-twoColumn__buttons">
                 <a class="c-btn--footerButton" href="#">
                   <span class="c-btn--primary">
-                    <span class="c-btn--default--primary">Googleマップ</span>
-                    <span class="c-btn--hover--primary">Googleマップ</span>
+                    <span class="c-btn--default--primary">お問い合わせ</span>
+                    <span class="c-btn--hover--primary">お問い合わせ</span>
                   </span>
                 </a>
               </div>

@@ -1,0 +1,101 @@
+.c-btn {
+  &--item {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    outline: none;
+    font-size: 15px;
+    padding-left: 5px;
+  }
+
+  &--itemText {
+    display: inline-block;
+    position: relative;
+  }
+
+  &--sideItem {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+
+    &--center {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &--footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(100% / 3);
+    }
+  }
+
+  &--sideText {
+    display: inline-block;
+    position: relative;
+    padding: 0 10px 0 30px;
+    font-size: 15px;
+  }
+
+  &--footerButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 50px;
+    border: grey 3px double;
+    flex-shrink: 0;
+  }
+
+  &--about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: #333;
+    font-size: 10px;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  &--primary {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &--default {
+    display: block;
+    font-size: 20px;
+  }
+
+  &--hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.3s;
+    font-size: 20px;
+
+    &--primary {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transform: translateY(100%);
+      transition: transform 0.3s;
+    }
+  }
+}

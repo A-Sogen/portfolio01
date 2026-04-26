@@ -1,0 +1,47 @@
+.c-menu {
+  display: inline-block;
+  overflow: hidden;
+
+  &--side {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  &--sideFooter {
+    color: gray;
+    padding-left: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &--default {
+    display: block;
+    font-size: 20px;
+
+    &--sideFooter {
+      font-size: 15px;
+    }
+  }
+
+  &--hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.3s;
+    font-size: 20px;
+
+    &--sideFooter {
+      font-size: 15px;
+      padding-left: 5px;
+    }
+  }
+}
+
+.c-menu--sideFooter .c-menu--hover--sideFooter {
+  transform: translateY(100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
