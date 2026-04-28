@@ -37,6 +37,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 14px 10px;
 }
 
 /*// ==========================================================================
@@ -141,6 +142,9 @@ body {
   display: block;
   font-size: 20px;
 }
+.c-btn--default--primary {
+  display: block;
+}
 .c-btn--hover {
   position: absolute;
   top: 0;
@@ -161,8 +165,7 @@ body {
 .c-img--headerLogo {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .c-img--side {
   position: absolute;
@@ -183,8 +186,7 @@ body {
   margin: 0 auto;
   width: 720px;
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .c-img--hero, .c-img--subHero {
   width: 100%;
@@ -192,14 +194,12 @@ body {
 .c-img--flower {
   height: 30px;
   width: 30px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .c-img--section, .c-img--viewport {
   max-width: 350px;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .c-img--section--about, .c-img--viewport--about {
   flex-shrink: 0;
@@ -207,14 +207,12 @@ body {
 .c-img--event {
   max-width: 420px;
   max-height: 420px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .c-img--concept {
   width: 800px;
   height: 800px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: relative;
   left: -50px;
 }
@@ -226,16 +224,14 @@ body {
 .c-img--about {
   display: block;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .c-img--columnTitle {
   padding-top: 25px;
 }
 .c-img--columnImage {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .c-text--header {
@@ -342,6 +338,7 @@ body {
 .c-menu {
   display: inline-block;
   overflow: hidden;
+  max-height: fit-content;
 }
 .c-menu--side {
   position: relative;
@@ -352,6 +349,7 @@ body {
   color: gray;
   padding-left: 5px;
   position: relative;
+  display: inline-block;
   overflow: hidden;
 }
 .c-menu--default {
@@ -359,6 +357,7 @@ body {
   font-size: 20px;
 }
 .c-menu--default--sideFooter {
+  display: block;
   font-size: 15px;
 }
 .c-menu--hover {
@@ -381,6 +380,27 @@ body {
   left: 0;
 }
 
+.c-menuLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+.c-menuLabel--menu {
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+.c-menuLabel--close {
+  transform: rotateX(-90deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
 .c-menuText {
   display: flex;
   justify-content: center;
@@ -393,7 +413,7 @@ body {
   border-radius: 20px;
   width: 45px;
   height: 20px;
-  z-index: 1000;
+  z-index: 200;
   line-height: 20px;
 }
 
@@ -461,6 +481,10 @@ body {
 .p-headerMenu {
   display: flex;
 }
+.p-headerMenu--header {
+  display: flex;
+  justify-content: space-between;
+}
 .p-headerMenu--body {
   transition: 0.3s;
   position: fixed;
@@ -468,20 +492,18 @@ body {
   right: 0;
   background: #fff;
   transform: translateX(100%);
-  z-index: 999;
+  z-index: 1000;
   opacity: 0;
   pointer-events: none;
   border: solid 1px #333;
   border-radius: 5px;
   width: 450px;
+  padding: 13px;
 }
 .p-headerMenu--body.is-open {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(0);
-}
-.p-headerMenu--container {
-  padding: 30px;
 }
 .p-headerMenu--main {
   padding: 40px 0;
@@ -542,16 +564,6 @@ body {
   transform: translateX(0);
 }
 
-.c-menu.is-open .c-menuLabel--menu {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.c-menu.is-open .c-menuLabel--close {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 .c-menuText span,
 .c-menu--side span,
 .c-menu--sideFooter span,
@@ -566,14 +578,16 @@ body {
   transform: translateY(100%);
 }
 
-.js-menuToggle:hover .c-text--default,
+.js-menu-open:hover .c-text--default,
+.js-menu-close:hover .c-text--default,
 .c-menu:hover .c-menu--default,
 .c-btn--sideItem--footer:hover .c-menu--default--sideFooter,
 .c-btn--primary:hover .c-btn--default--primary {
   transform: translateY(-100%);
 }
 
-.js-menuToggle:hover .c-text--hover,
+.js-menu-open:hover .c-text--hover,
+.js-menu-close:hover .c-text--hover,
 .c-menu:hover .c-menu--hover,
 .c-btn--sideItem--footer:hover .c-menu--hover--sideFooter,
 .c-btn--primary:hover .c-btn--hover--primary {
@@ -745,8 +759,7 @@ body {
 .p-twoColumn__body iframe {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   aspect-ratio: 3/2;
 }
 .p-twoColumn__textBox {
@@ -791,4 +804,6 @@ body {
 .p-buttonWrap {
   display: flex;
   gap: 10px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

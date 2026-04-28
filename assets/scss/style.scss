@@ -28,6 +28,7 @@
 @use 'object/component/_text';
 @use 'object/component/_listItem';
 @use 'object/component/_menu';
+@use 'object/component/_menuLabel';
 @use 'object/component/_menuText';
 @use 'object/component/_line';
 @use 'object/component/_topic';
@@ -63,15 +64,6 @@
   transform: translateX(0);
 }
 
-.c-menu.is-open .c-menuLabel--menu {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.c-menu.is-open .c-menuLabel--close {
-  opacity: 1;
-  pointer-events: auto;
-}
 
 .c-menuText span,
 .c-menu--side span,
@@ -87,14 +79,16 @@
   transform: translateY(100%);
 }
 
-.js-menuToggle:hover .c-text--default,
+.js-menu-open:hover .c-text--default,
+.js-menu-close:hover .c-text--default,
 .c-menu:hover .c-menu--default,
 .c-btn--sideItem--footer:hover .c-menu--default--sideFooter,
 .c-btn--primary:hover .c-btn--default--primary {
   transform: translateY(-100%);
 }
 
-.js-menuToggle:hover .c-text--hover,
+.js-menu-open:hover .c-text--hover,
+.js-menu-close:hover .c-text--hover,
 .c-menu:hover .c-menu--hover,
 .c-btn--sideItem--footer:hover .c-menu--hover--sideFooter,
 .c-btn--primary:hover .c-btn--hover--primary {

@@ -79,6 +79,10 @@
   &--default {
     display: block;
     font-size: 20px;
+
+    &--primary {
+      display: block;
+    }
   }
 
   &--hover {

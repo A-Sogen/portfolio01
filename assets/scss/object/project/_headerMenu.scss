@@ -1,6 +1,11 @@
 .p-headerMenu {
   display: flex;
 
+  &--header {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &--body {
     transition: 0.3s;
     position: fixed;
@@ -8,22 +13,19 @@
     right: 0;
     background: #fff;
     transform: translateX(100%);
-    z-index: 999;
+    z-index: 1000;
     opacity: 0;
     pointer-events: none;
     border: solid 1px #333;
     border-radius: 5px;
     width: 450px;
+    padding: 13px;
   }
 
   &--body.is-open {
     opacity: 1;
     pointer-events: auto;
     transform: translateX(0);
-  }
-
-  &--container {
-    padding: 30px;
   }
 
   &--main {

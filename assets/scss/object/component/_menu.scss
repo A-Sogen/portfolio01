@@ -1,6 +1,7 @@
 .c-menu {
   display: inline-block;
   overflow: hidden;
+  max-height: fit-content;
 
   &--side {
     position: relative;
@@ -12,6 +13,7 @@
     color: gray;
     padding-left: 5px;
     position: relative;
+    display: inline-block;
     overflow: hidden;
   }
 
@@ -20,6 +22,7 @@
     font-size: 20px;
 
     &--sideFooter {
+      display: block;
       font-size: 15px;
     }
   }
