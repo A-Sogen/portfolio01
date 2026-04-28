@@ -24,6 +24,7 @@
 
 @use 'object/component/_arrow';
 @use 'object/component/_btn';
+@use 'object/component/_contentsTitle';
 @use 'object/component/_image';
 @use 'object/component/_text';
 @use 'object/component/_listItem';
@@ -40,8 +41,11 @@
 @use 'object/project/_headerWrap';
 @use 'object/project/_headerLogo';
 @use 'object/project/_headerMenu';
+@use 'object/project/_imageText';
 @use 'object/project/_navList';
+@use 'object/project/_section';
 @use 'object/project/_subHero';
+@use 'object/project/_tagList';
 @use 'object/project/_topics';
 
 /*// -----------------------------------------------------------------
@@ -56,13 +60,6 @@
 
 
 
-.c-btn--item:hover .c-arrow,
-.c-btn--sideItem:hover .c-arrow--sideMenu,
-.c-topic:hover .c-arrow,
-.p-section__content:hover .c-arrow--event {
-  opacity: 1;
-  transform: translateX(0);
-}
 
 
 .c-menuText span,
@@ -95,151 +92,9 @@
   transform: translateY(0);
 }
 
-.p-section {
-  margin: 200px 40px;
-  border-top: #ccc 1px solid;
 
-  &__columnList {
-    margin: 200px 0;
-    border-top: none;
-    position: relative;
-  }
 
-  &--wrap {
-    margin: 60px 0 100px;
-  }
 
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 350px;
-
-    &--right {
-      align-items: flex-end;
-    }
-  }
-
-  &__contentsWrap {
-    display: flex;
-    gap: 15px;
-  }
-
-  &__content {
-    max-width: 420px;
-    width: 100%;
-  }
-
-  &__concept {
-    display: flex;
-  }
-
-  &--textBox {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    writing-mode: vertical-rl;
-    padding-left: 50px;
-  }
-
-  &__button {
-    display: flex;
-    justify-content: center;
-    margin-top: 55px;
-  }
-
-  &__about {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  &__aboutBox {
-    display: flex;
-    gap: 20px;
-    padding-top: 50px;
-  }
-
-  &__aboutContents {
-    width: calc(100% / 3);
-  }
-}
-
-.c-contentsTitle {
-  display: flex;
-  align-items: center;
-  padding-top: 25px;
-
-  &--right {
-    justify-content: flex-end;
-  }
-}
-
-.p-tagList {
-  padding-top: 10px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
-  width: 250px
-}
-
-.p-tagList li {
-  border: gray  1px solid;
-  font-size: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-  height: 25px;
-}
-
-.p-imageText {
-  display: block;
-  position: relative;
-  overflow: hidden;
-
-  &__number {
-    color: #fff;
-    font-size: 15px;
-    top: 20px;
-    position: absolute;
-    left: 15px;
-  }
-
-  &__about {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  &__title {
-    color: #fff;
-    font-size: 60px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-.p-imageText::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0,0,0,0.3);
-  z-index: 1;
-}
-
-.p-imageText__title,.p-imageText__number {
-  position: absolute;
-  z-index: 2;
-}
 
 .p-twoColumn {
   width: 100%;

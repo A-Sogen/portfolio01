@@ -1,120 +1,116 @@
-.c-text {
-  &--header {
-    padding-left: 30px;
-    font-size: 12.6479px;
-  }
+.c-text--header {
+  padding-left: 30px;
+  font-size: 12.6479px;
+}
 
-  &--default {
-    display: block;
-    text-align: center;
-  }
+.c-text--default {
+  display: block;
+  text-align: center;
+}
 
-  &--hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-  }
+.c-text--hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
 
-  &--title {
-    color: gray;
-    font-size: 19.9681px;
-    text-align: center;
-    padding-top: 20px;
+.c-text--title {
+  color: gray;
+  font-size: 19.9681px;
+  text-align: center;
+  padding-top: 20px;
+}
 
-    &--large {
-      padding-top: 30px;
-    }
-  }
+.c-text--title--large {
+  padding-top: 30px;
+}
 
-  &--headerMenu {
-    color: gray;
-    font-size: 10px;
-  }
+.c-text--headerMenu {
+  color: gray;
+  font-size: 10px;
+}
 
-  &--main {
-    font-size: 30px;
-  }
+.c-text--main {
+  font-size: 30px;
+}
 
-  &--ContentsTitle {
-    font-size: 15px;
-  }
+.c-text--ContentsTitle {
+  font-size: 15px;
+}
 
-  &--section {
-    padding: 50px 0;
-    text-align: left;
+.c-text--section {
+  padding: 50px 0;
+  text-align: left;
+}
 
-    &--plan {
-      padding: 120px 0 50px;
-    }
-  }
+.c-text--section--plan {
+  padding: 120px 0 50px;
+}
 
-  &--sectionLine {
-    padding-bottom: 10px;
-  }
+.c-text--sectionLine {
+  padding-bottom: 10px;
+}
 
-  &--sectionTitle {
-    padding-top: 15px;
-    font-size: 15px;
-    text-align: left;
-  }
+.c-text--sectionTitle {
+  padding-top: 15px;
+  font-size: 15px;
+  text-align: left;
+}
 
-  &--schedule {
-    padding-top: 15px;
-    font-size: 15px;
-    text-align: left;
-    color: gray;
-  }
+.c-text--schedule {
+  padding-top: 15px;
+  font-size: 15px;
+  text-align: left;
+  color: gray;
+}
 
-  &--concept {
-    text-align: left;
-    font-size: 40px;
-    padding-right: 10px;
-  }
+.c-text--concept {
+  text-align: left;
+  font-size: 40px;
+  padding-right: 10px;
+}
 
-  &--conceptNumber {
-    font-size: 20px;
-  }
+.c-text--conceptNumber {
+  font-size: 20px;
+}
 
-  &--about {
-    width: 50%;
-    text-align: left;
-  }
+.c-text--about {
+  width: 50%;
+  text-align: left;
+}
 
-  &__aboutContents {
-    padding-top: 20px;
-    font-size: 15px;
-    font-weight: 500;
-  }
+.c-text__aboutContents {
+  padding-top: 20px;
+  font-size: 15px;
+  font-weight: 500;
+}
 
-  &--columnTopic {
-    padding-top: 30px;
-    font-size: 35px;
-  }
+.c-text--columnTopic {
+  padding-top: 30px;
+  font-size: 35px;
+}
 
-  &--subHero {
-    color: #fff;
-    text-shadow: 0 3px 10px rgba(0,0,0,0.4);
-    font-size: 50px;
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -30%);
-  }
+.c-text--subHero {
+  color: #fff;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  font-size: 50px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+}
 
-  &--label {
-    width: 40%;
-  }
+.c-text--label {
+  width: 40%;
+}
 
-  &--telNumber {
-    font-size: 40px;
-  }
+.c-text--telNumber {
+  font-size: 40px;
+}
 
-  &--label,
-  &--detail,
-  &--telNumber {
-    font-weight: 500;
-    text-align: left;
-  }
+.c-text--label, .c-text--detail, .c-text--telNumber {
+  font-weight: 500;
+  text-align: left;
 }

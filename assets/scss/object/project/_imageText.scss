@@ -1,0 +1,41 @@
+.p-imageText {
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 1;
+  }
+}
+
+.p-imageText__number {
+  color: #fff;
+  font-size: 15px;
+  top: 20px;
+  position: absolute;
+  left: 15px;
+}
+
+.p-imageText__about {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.p-imageText__title {
+  color: #fff;
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-imageText__title,.p-imageText__number {
+  position: absolute;
+  z-index: 2;
+}

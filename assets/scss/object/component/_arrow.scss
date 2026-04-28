@@ -4,22 +4,22 @@
   opacity: 0;
   transition: 0.3s;
   transform: translateX(-10px);
+}
 
-  &--sideMenu {
-    width: 20px;
-    height: 20px;
-    opacity: 0;
-    transition: 0.3s;
-    transform: translateX(-10px);
-  }
+.c-arrow--sideMenu {
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateX(-10px);
+}
 
-  &--event {
-    width: 30px;
-    height: 30px;
-    opacity: 0;
-    transition: 0.3s;
-    transform: translateX(-10px);
-    display: block;
-    align-items: flex-start;
-  }
+.c-arrow--event {
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateX(-10px);
+  display: block;
+  align-items: flex-start;
 }
