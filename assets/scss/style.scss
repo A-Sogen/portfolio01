@@ -38,156 +38,23 @@
 // Project
 // -----------------------------------------------------------------*/
 
+@use 'object/project/_buttonWrap';
 @use 'object/project/_headerWrap';
 @use 'object/project/_headerLogo';
 @use 'object/project/_headerMenu';
 @use 'object/project/_imageText';
 @use 'object/project/_navList';
+@use 'object/project/_others';
+@use 'object/project/_plan';
 @use 'object/project/_section';
 @use 'object/project/_subHero';
 @use 'object/project/_tagList';
 @use 'object/project/_topics';
+@use 'object/project/_twoColumn';
 
 /*// -----------------------------------------------------------------
 // Utility
 // -----------------------------------------------------------------*/
 
+@use 'object/utility/_color';
 @use 'object/utility/_margin';
-
-
-
-
-
-
-
-
-
-.c-menuText span,
-.c-menu--side span,
-.c-menu--sideFooter span,
-.c-btn--primary span {
-  transition: 0.3s ;
-  transform: translateY(0);
-}
-
-.c-menuText .c-text--hover,
-.c-menu--side .c-menu--hover,
-.c-btn--primary .c-btn--hover--primary {
-  transform: translateY(100%);
-}
-
-.js-menu-open:hover .c-text--default,
-.js-menu-close:hover .c-text--default,
-.c-menu:hover .c-menu--default,
-.c-btn--sideItem--footer:hover .c-menu--default--sideFooter,
-.c-btn--primary:hover .c-btn--default--primary {
-  transform: translateY(-100%);
-}
-
-.js-menu-open:hover .c-text--hover,
-.js-menu-close:hover .c-text--hover,
-.c-menu:hover .c-menu--hover,
-.c-btn--sideItem--footer:hover .c-menu--hover--sideFooter,
-.c-btn--primary:hover .c-btn--hover--primary {
-  transform: translateY(0);
-}
-
-
-
-
-
-.p-twoColumn {
-  width: 100%;
-  display: flex;
-  position: relative;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 80px);
-    height: 1px;
-    background-color: #ccc;
-  }
-
-  &::before {
-    top: 0;
-  }
-
-  &::after {
-    bottom: 0;
-  }
-
-  &__item {
-  width: 50%;
-  padding: 30px 30px 230px;
-  }
-
-  &__title {
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__body {
-    margin-top: 20px;
-  }
-
-  &__body iframe {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    aspect-ratio: 3 / 2;
-  }
-
-  &__textBox {
-    max-width: 570px;
-    padding-top: 30px;
-    text-align: left;
-    margin: 0 auto;
-  }
-
-  &__buttons {
-    padding-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(3,auto);
-    gap: 10px;
-    max-width: 650px;
-    margin: 0 auto;
-    justify-content: center;
-  }
-
-  &__information {
-    padding-top: 25px;
-  }
-
-  &__contents {
-    display: flex;
-    align-items: flex-start;
-    padding-top: 20px;
-  }
-
-  &__tel {
-    width: 60%;
-  }
-}
-
-.p-twoColumn__item:first-child {
-  border-right: 1px solid #ccc;
-}
-
-.p-twoColumn__contents:first-child {
-  padding-top: 0;
-}
-
-.p-plan {
-  margin: 0 40px;
-}
-
-.p-buttonWrap {
-  display: flex;
-  gap: 10px;
-}

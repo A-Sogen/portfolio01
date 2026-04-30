@@ -10,6 +10,10 @@
   overflow: hidden;
 }
 
+.c-menu--side .c-menu--hover {
+  transform: translateY(100%);
+}
+
 .c-menu--sideFooter {
   color: gray;
   padding-left: 5px;
@@ -47,4 +51,22 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.c-menu--side span,
+.c-menu--sideFooter span {
+  transition: 0.3s ;
+  transform: translateY(0);
+}
+
+.js-menu-open:hover .c-text--default,
+.js-menu-close:hover .c-text--default,
+.c-menu:hover .c-menu--default {
+  transform: translateY(-100%);
+}
+
+.js-menu-open:hover .c-text--hover,
+.js-menu-close:hover .c-text--hover,
+.c-menu:hover .c-menu--hover {
+  transform: translateY(0);
 }

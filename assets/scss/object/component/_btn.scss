@@ -75,6 +75,10 @@
   overflow: hidden;
 }
 
+.c-btn--primary .c-btn--hover--primary {
+  transform: translateY(100%);
+}
+
 .c-btn--default {
   display: block;
   font-size: 20px;
@@ -106,4 +110,19 @@
 .c-btn--sideItem:hover .c-arrow--sideMenu {
   opacity: 1;
   transform: translateX(0);
+}
+
+.c-btn--primary span {
+  transition: 0.3s ;
+  transform: translateY(0);
+}
+
+.c-btn--sideItem--footer:hover .c-menu--default--sideFooter,
+.c-btn--primary:hover .c-btn--default--primary {
+  transform: translateY(-100%);
+}
+
+.c-btn--sideItem--footer:hover .c-menu--hover--sideFooter,
+.c-btn--primary:hover .c-btn--hover--primary {
+  transform: translateY(0);
 }

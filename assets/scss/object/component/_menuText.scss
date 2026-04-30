@@ -13,3 +13,12 @@
   z-index: 200;
   line-height: 20px;
 }
+
+.c-menuText span {
+  transition: 0.3s ;
+  transform: translateY(0);
+}
+
+.c-menuText .c-text--hover {
+  transform: translateY(100%);
+}
