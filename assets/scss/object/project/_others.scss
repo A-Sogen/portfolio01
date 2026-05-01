@@ -1,11 +1,55 @@
+.p-others {
+  margin: 0;
+  width: 100%;
+  display: flex;
+}
+
 .p-others__content {
-  max-width: 620px;
-  flex: 1;
+  max-width: 650px;
 }
 
 .p-others__photoLogo {
+  margin: 0 auto;
   background-color: #262626;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 86px;
+}
+
+.p-others__item {
+  position: relative;
+  width: 50%;
+  background-image: url("../image/mono_Party.jpeg");
+  height: 900px;
+  background-size: cover;
+  padding: 0 40px 150px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.p-others__item--cafe {
+  background-image: url("../image/mono_CAFE.png");
+}
+
+.p-others__inner {
+  margin-top: 260px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.p-others__textBox {
+  max-width: 635px;
+  text-align: left;
 }

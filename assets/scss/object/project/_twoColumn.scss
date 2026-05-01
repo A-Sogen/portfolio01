@@ -1,11 +1,10 @@
 .p-twoColumn {
-  margin: 200px 0;
+  margin-top: 200px;
   width: 100%;
   display: flex;
   position: relative;
 
-  &::before,
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     left: 50%;
@@ -34,7 +33,7 @@
 }
 
 .p-twoColumn__title {
-  font-size: 15px;
+  font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,6 +65,10 @@
   max-width: 650px;
   margin: 0 auto;
   justify-content: center;
+}
+
+.p-twoColumn__buttons--others {
+  padding-top: 46px;
 }
 
 .p-twoColumn__information {

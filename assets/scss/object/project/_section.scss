@@ -32,6 +32,7 @@
 .p-section__contentsWrap {
   display: flex;
   gap: 15px;
+  max-width: 1315px;
 }
 
 .p-section__content {
@@ -84,5 +85,5 @@
 }
 
 .p-section__othersWrap {
-  margin: 0 40px;
+  margin: 0 40px ;
 }
