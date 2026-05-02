@@ -48,8 +48,34 @@ window.addEventListener("load", () => {
    */
 
   /**
-   * フッターの画像」
+   * フッターの画像
    */
+  function slideImage() {
+    const track = document.querySelectorAll('.js-footerImage__row');
+
+    console.log("track" + track);
+    track.forEach((item) => {
+
+      console.log("item" + item);
+      item.innerHTML += item.innerHTML;
+
+      let y = 0;
+      const speed = 1;
+
+      function animate() {
+        y += speed;
+
+        if (y >= item.scrollHeight / 2) {
+          y = 0;
+        }
+        item.style.transform = 'translateY(-$(y)px)';
+        requestAnimationFrame(animate);
+      }
+      animate();
+    })
+  }
+
+  slideImage();
   link();
   changeButtonText();
 });

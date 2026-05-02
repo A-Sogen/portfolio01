@@ -1,0 +1,12 @@
+.p-footerImage {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.p-footerImage__row {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
