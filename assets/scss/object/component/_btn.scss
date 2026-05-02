@@ -49,9 +49,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 180px;
   border: grey 3px double;
+  max-width: 170px;
   min-height: 50px;
+  flex: 1;
+}
+
+.c-btn--footerButton--sizeM {
+  min-width: 170px;
 }
 
 .c-btn--footerButton--others {

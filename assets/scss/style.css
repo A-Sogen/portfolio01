@@ -125,9 +125,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 180px;
   border: grey 3px double;
+  max-width: 170px;
   min-height: 50px;
+  flex: 1;
+}
+
+.c-btn--footerButton--sizeM {
+  min-width: 170px;
 }
 
 .c-btn--footerButton--others {
@@ -454,6 +459,7 @@ body {
   padding-top: 20px;
   font-size: 15px;
   font-weight: 500;
+  min-height: 75px;
 }
 
 .c-text--columnTopic {
@@ -695,6 +701,7 @@ body {
 .p-buttonWrap {
   display: flex;
   gap: 10px;
+  width: 100%;
 }
 
 .p-footerWrap {
@@ -950,7 +957,7 @@ body {
 .p-section__button {
   display: flex;
   justify-content: center;
-  margin-top: 55px;
+  margin-top: 25px;
 }
 
 .p-section__about {
