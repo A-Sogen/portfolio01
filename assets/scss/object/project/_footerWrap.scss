@@ -1,3 +1,5 @@
+@use '../../foundation/mixin' as *;
+
 .p-footerWrap {
   display: flex;
   flex-direction: column;

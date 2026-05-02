@@ -1,3 +1,5 @@
+@use '../../foundation/mixin' as *;
+
 .p-twoColumn {
   margin-top: 200px;
   width: 100%;
@@ -24,7 +26,7 @@
 }
 
 .p-twoColumn__item {
-  width: 50%;
+  flex: 1;
   padding: 30px 30px 230px;
 
   &:first-child {
@@ -60,9 +62,8 @@
 .p-twoColumn__buttons {
   padding-top: 30px;
   display: grid;
-  grid-template-columns: repeat(3,auto);
+  grid-template-columns: repeat(3,1fr);
   gap: 10px;
-  max-width: 650px;
   margin: 0 auto;
   justify-content: center;
 }

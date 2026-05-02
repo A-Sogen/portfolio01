@@ -125,13 +125,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 130px;
+  min-width: 180px;
   border: grey 3px double;
   min-height: 50px;
 }
 
 .c-btn--footerButton--others {
   color: #fff;
+  max-width: 170px;
 }
 
 .c-btn--about {
@@ -307,7 +308,7 @@ body {
 
 .c-img--concept--right {
   left: auto;
-  right: 0;
+  right: -40px;
   max-width: none;
 }
 
@@ -925,7 +926,7 @@ body {
 .p-section__contentsWrap {
   display: flex;
   gap: 15px;
-  max-width: 1315px;
+  flex: 1;
 }
 
 .p-section__content:hover .c-arrow--event {
@@ -1032,7 +1033,7 @@ body {
 }
 
 .p-twoColumn__item {
-  width: 50%;
+  flex: 1;
   padding: 30px 30px 230px;
 }
 .p-twoColumn__item:first-child {
@@ -1068,9 +1069,8 @@ body {
 .p-twoColumn__buttons {
   padding-top: 30px;
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  max-width: 650px;
   margin: 0 auto;
   justify-content: center;
 }
