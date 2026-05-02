@@ -47,10 +47,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 50px;
+  min-width: 130px;
   border: grey 3px double;
-  flex-shrink: 0;
+  min-height: 50px;
 }
 
 .c-btn--footerButton--others {
@@ -74,12 +73,18 @@
   z-index: 2;
 }
 
-.c-btn--primary {
+.c-btn--primary,
+.c-btn--sns {
   position: relative;
   overflow: hidden;
 }
 
-.c-btn--primary .c-btn--hover--primary {
+.c-btn--sns {
+  color: #fff;
+}
+
+.c-btn--primary .c-btn--hover--primary,
+.c-btn--sns  .c-btn--hover--sns {
   transform: translateY(100%);
 }
 
@@ -88,7 +93,8 @@
   font-size: 20px;
 }
 
-.c-btn--default--primary {
+.c-btn--default--primary,
+.c-btn--default--sns {
   display: block;
 }
 
@@ -101,7 +107,8 @@
   font-size: 20px;
 }
 
-.c-btn--hover--primary {
+.c-btn--hover--primary,
+.c-btn--hover--sns {
   position: absolute;
   top: 0;
   left: 0;
@@ -116,17 +123,20 @@
   transform: translateX(0);
 }
 
-.c-btn--primary span {
+.c-btn--primary span,
+.c-btn--sns span {
   transition: 0.3s ;
   transform: translateY(0);
 }
 
 .c-btn--sideItem--footer:hover .c-menu--default--sideFooter,
-.c-btn--primary:hover .c-btn--default--primary {
+.c-btn--primary:hover .c-btn--default--primary,
+.c-btn--sns:hover  .c-btn--default--sns {
   transform: translateY(-100%);
 }
 
 .c-btn--sideItem--footer:hover .c-menu--hover--sideFooter,
-.c-btn--primary:hover .c-btn--hover--primary {
+.c-btn--primary:hover .c-btn--hover--primary,
+.c-btn--sns:hover  .c-btn--hover--sns {
   transform: translateY(0);
 }
