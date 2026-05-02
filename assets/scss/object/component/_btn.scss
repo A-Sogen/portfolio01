@@ -51,7 +51,8 @@
   align-items: center;
   border: grey 3px double;
   max-width: 170px;
-  min-height: 50px;
+  max-height: 50px;
+  padding: 16px;
   flex: 1;
 }
 

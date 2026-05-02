@@ -59,6 +59,7 @@
   padding-top: 15px;
   font-size: 15px;
   text-align: left;
+  min-height: 80px;
 }
 
 .c-text--schedule {
@@ -111,6 +112,10 @@
 
 .c-text--telNumber {
   font-size: 40px;
+
+  @include tab {
+    font-size: 20px;
+  }
 }
 
 .c-text--label, .c-text--detail, .c-text--telNumber {
@@ -121,6 +126,7 @@
 .c-text--photoText {
   color: #fff;
   padding-top: 23px;
+  min-height: 70px;
 }
 
 .c-text--sectionLead {

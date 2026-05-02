@@ -127,7 +127,8 @@ body {
   align-items: center;
   border: grey 3px double;
   max-width: 170px;
-  min-height: 50px;
+  max-height: 50px;
+  padding: 16px;
   flex: 1;
 }
 
@@ -296,7 +297,7 @@ body {
 }
 
 .c-img--event {
-  max-width: 250px;
+  max-width: 100%;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
@@ -431,6 +432,7 @@ body {
   padding-top: 15px;
   font-size: 15px;
   text-align: left;
+  min-height: 80px;
 }
 
 .c-text--schedule {
@@ -484,6 +486,11 @@ body {
 .c-text--telNumber {
   font-size: 40px;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .c-text--telNumber {
+    font-size: 20px;
+  }
+}
 
 .c-text--label, .c-text--detail, .c-text--telNumber {
   font-weight: 500;
@@ -493,6 +500,7 @@ body {
 .c-text--photoText {
   color: #fff;
   padding-top: 23px;
+  min-height: 70px;
 }
 
 .c-text--sectionLead {
@@ -704,17 +712,17 @@ body {
   width: 100%;
 }
 
-.p-footerWrap {
+.p-footerContents {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.p-footerWrap > * {
+.p-footerContents > * {
   position: relative;
   z-index: 1;
 }
 
-.p-footerWrap__image {
+.p-footeContents__image {
   margin: 150px 0;
 }
 
@@ -917,6 +925,7 @@ body {
 .p-section__inner {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .p-section__text {

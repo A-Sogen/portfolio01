@@ -1,6 +1,6 @@
 @use '../../foundation/mixin' as *;
 
-.p-footerWrap {
+.p-footerContents {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,6 +11,6 @@
   }
 }
 
-.p-footerWrap__image {
+.p-footeContents__image {
   margin: 150px 0;
 }
