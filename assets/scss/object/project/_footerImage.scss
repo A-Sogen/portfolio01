@@ -2,6 +2,9 @@
   display: flex;
   overflow: hidden;
   position: relative;
+  max-height: 550px;
+  background-color: #7e7d83;
+  gap: 10px;
 }
 
 .p-footerImage__row {

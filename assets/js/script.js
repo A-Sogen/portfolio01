@@ -53,10 +53,8 @@ window.addEventListener("load", () => {
   function slideImage() {
     const track = document.querySelectorAll('.js-footerImage__row');
 
-    console.log("track" + track);
     track.forEach((item) => {
 
-      console.log("item" + item);
       item.innerHTML += item.innerHTML;
 
       let y = 0;
@@ -68,7 +66,8 @@ window.addEventListener("load", () => {
         if (y >= item.scrollHeight / 2) {
           y = 0;
         }
-        item.style.transform = 'translateY(-$(y)px)';
+
+        item.style.transform = `translateY(-${y}px)`;
         requestAnimationFrame(animate);
       }
       animate();
