@@ -299,11 +299,15 @@ body {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: scale(1);
 }
 
 .c-img--hero,
 .c-img--subHero {
   width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .c-img--flower {
@@ -516,7 +520,7 @@ body {
 .c-text--subHero {
   color: #fff;
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
-  font-size: 50px;
+  font-size: 40px;
   position: absolute;
   left: 50%;
   top: 30%;
@@ -931,6 +935,11 @@ body {
   z-index: 2;
 }
 
+.p-mainWrap {
+  overflow: hidden;
+  position: relative;
+}
+
 .p-navList {
   padding-right: 10px;
 }
@@ -1100,6 +1109,7 @@ body {
 
 .p-subHero {
   position: relative;
+  overflow: hidden;
 }
 
 .p-tagList {

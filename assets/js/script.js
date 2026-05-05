@@ -2,7 +2,18 @@ window.addEventListener("load", () => {
   document.body.classList.add("is-show");
 
   /**
-   *
+   * スムーススクロール
+   */
+  const lenis = new Lenis();
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  /**
+   * ページ遷移前にフェードアウトさせる処理
    */
   function link() {
     document.querySelectorAll(".c-link").forEach((link) => {
@@ -38,11 +49,31 @@ window.addEventListener("load", () => {
   /**
    * スクロールで画像拡大
    */
+  function scrollZoom() {
+    const hero = document.querySelector(".c-img--hero");
+    const subHero = document.querySelector(".c-img--subHero");
 
-  /**
-   * スムーススクロールの実装
-   */
-  
+    lenis.on("scroll", () => {
+
+      // ===== hero =====
+      const heroRect = hero.getBoundingClientRect();
+      const heroProgress = Math.min(
+        Math.max((window.innerHeight - heroRect.top) / window.innerHeight, 0),
+        1
+      );
+
+      hero.style.transform = `scale(${0.6 + heroProgress * 0.4})`;
+
+      // ===== subHero =====
+      const subRect = subHero.getBoundingClientRect();
+      const subProgress = Math.min(
+        Math.max((window.innerHeight - subRect.top) / window.innerHeight, 0),
+        1
+      );
+
+      subHero.style.transform = `scale(${0.6 + subProgress * 0.4})`;
+    });
+  }
 
   /**
    * スクロールしたときの画像位置固定？？
@@ -76,6 +107,7 @@ window.addEventListener("load", () => {
   }
 
   slideImage();
+  scrollZoom();
   link();
   changeButtonText();
 });
