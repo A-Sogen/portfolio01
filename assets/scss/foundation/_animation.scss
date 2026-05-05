@@ -2,3 +2,10 @@
   opacity: 0;
   transition: opacity 0.5s ease;
 }
+
+@keyframes arrowMove {
+  0%   { transform: translateX(0); }
+  40%  { transform: translateX(6px); }
+  70%  { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}

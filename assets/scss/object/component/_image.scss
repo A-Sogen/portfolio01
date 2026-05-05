@@ -71,12 +71,14 @@
   object-fit: cover;
   object-position: 45% 80%;
   position: relative;
-  transform: translateX(-40px);
+  --x: -40px;
+  --y: 0px;
+  transform: translate(var(--x), var(--y));
 }
 
 .c-img--concept--right {
   left: auto;
-  transform: translateX(40px);
+  --x: 40px;
 }
 
 .c-img--about {
@@ -92,6 +94,15 @@
 .c-img--columnImage {
   width: 100%;
   object-fit: cover;
+}
+
+.c-img--concept,
+.c-img--viewport,
+.c-img--about,
+.c-img--columnImage {
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
 }
 
 .c-img--others {

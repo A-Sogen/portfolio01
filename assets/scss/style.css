@@ -6,6 +6,20 @@
   transition: opacity 0.5s ease;
 }
 
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  70% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 *,
 *::before,
 *::after {
@@ -178,14 +192,23 @@ body {
   width: 30px;
   height: 30px;
   background-color: #fff;
-  color: #333;
-  font-size: 10px;
-  border-radius: 2px;
+  border-radius: 5px;
   position: absolute;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
   z-index: 2;
+}
+
+.c-btn--about__icon {
+  color: #333;
+  font-size: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.c-btn--about:hover .c-btn--about__icon {
+  animation: arrowMove 0.3s ease;
 }
 
 .c-btn--primary,
@@ -349,12 +372,14 @@ body {
   -o-object-position: 45% 80%;
      object-position: 45% 80%;
   position: relative;
-  transform: translateX(-40px);
+  --x: -40px;
+  --y: 0px;
+  transform: translate(var(--x), var(--y));
 }
 
 .c-img--concept--right {
   left: auto;
-  transform: translateX(40px);
+  --x: 40px;
 }
 
 .c-img--about {
@@ -372,6 +397,17 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.c-img--concept,
+.c-img--viewport,
+.c-img--about,
+.c-img--columnImage {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 20%;
+     object-position: center 20%;
 }
 
 .c-img--others {

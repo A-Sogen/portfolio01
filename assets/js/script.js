@@ -78,6 +78,27 @@ window.addEventListener("load", () => {
   /**
    * スクロールしたときの画像位置固定？？
    */
+  function imageScrollInside() {
+    const images = document.querySelectorAll(
+      ".c-img--concept, .c-img--viewport, .c-img--about, .c-img--columnImage"
+    );
+
+    lenis.on("scroll", () => {
+      images.forEach((img) => {
+        const rect = img.getBoundingClientRect();
+
+        const progress = Math.min(
+          Math.max((window.innerHeight - rect.top) / window.innerHeight, 0),
+          1
+        );
+
+        // 上 → 下へ移動
+        const positionY = progress * 200;
+
+        img.style.objectPosition = `center ${positionY}%`;
+      });
+    });
+  }
 
   /**
    * フッターの画像
@@ -106,8 +127,26 @@ window.addEventListener("load", () => {
     })
   }
 
+  /**
+   * トップページへ飛ぶ
+   */
+  const backTop = document.querySelector(".c-backTop");
+
+  backTop.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (typeof lenis !== "undefined") {
+      lenis.scrollTo(0);
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  });
+
   slideImage();
   scrollZoom();
   link();
-  changeButtonText();
+  imageScrollInside();
 });
