@@ -61,11 +61,13 @@
 
 .p-twoColumn__buttons {
   padding-top: 30px;
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 10px;
   margin: 0 auto;
-  justify-content: center;
+  max-width: 600px;
+  justify-items: center;
 }
 
 .p-twoColumn__buttons--others {

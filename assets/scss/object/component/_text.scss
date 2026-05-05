@@ -115,7 +115,6 @@
 
   @include tab {
     font-size: 20px;
-    
   }
 }
 
@@ -131,7 +130,7 @@
 }
 
 .c-text--sectionLead {
-  font-size: 40px;
+  font-size: 24px;
   padding-bottom: 35px;
 }
 
@@ -143,4 +142,9 @@
   color: #fff;
   padding-top: 60px;
   font-size: 30px;
+}
+
+.c-text--footer {
+  font-size: 13px;
+  color: #fff;
 }

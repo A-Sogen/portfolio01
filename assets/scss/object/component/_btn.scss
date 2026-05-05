@@ -52,8 +52,8 @@
   border: grey 3px double;
   max-width: 170px;
   max-height: 50px;
+  width: clamp(120px, 100%, 170px);
   padding: 16px;
-  flex: 1;
 }
 
 .c-btn--footerButton--sizeM {
@@ -102,9 +102,9 @@
   font-size: 20px;
 }
 
-.c-btn--default--primary,
-.c-btn--default--sns {
+.c-btn--default--primary {
   display: block;
+  font-size: 13px;
 }
 
 .c-btn--hover {
@@ -116,14 +116,14 @@
   font-size: 20px;
 }
 
-.c-btn--hover--primary,
-.c-btn--hover--sns {
+.c-btn--hover--primary {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   transform: translateY(100%);
   transition: transform 0.3s;
+  font-size: 13px;
 }
 
 .c-btn--item:hover .c-arrow,
@@ -132,20 +132,19 @@
   transform: translateX(0);
 }
 
-.c-btn--primary span,
-.c-btn--sns span {
+.c-btn--primary span {
   transition: 0.3s ;
   transform: translateY(0);
 }
 
 .c-btn--sideItem--footer:hover .c-menu--default--sideFooter,
 .c-btn--primary:hover .c-btn--default--primary,
-.c-btn--sns:hover  .c-btn--default--sns {
+.c-btn--sns:hover  .c-btn--default--primary {
   transform: translateY(-100%);
 }
 
 .c-btn--sideItem--footer:hover .c-menu--hover--sideFooter,
 .c-btn--primary:hover .c-btn--hover--primary,
-.c-btn--sns:hover  .c-btn--hover--sns {
+.c-btn--sns:hover  .c-btn--hover--primary {
   transform: translateY(0);
 }

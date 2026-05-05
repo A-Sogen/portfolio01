@@ -35,10 +35,13 @@
 .p-section__contentsWrap {
   display: flex;
   gap: 15px;
-  flex: 1;
 }
 
 .p-section__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
   &:hover .c-arrow--event {
     opacity: 1;
     transform: translateX(0);
@@ -56,6 +59,7 @@
   justify-content: flex-start;
   writing-mode: vertical-rl;
   padding-left: 50px;
+  flex: 1;
 }
 
 .p-section__button {
