@@ -47,6 +47,10 @@
   object-fit: contain;
 }
 
+.c-img--viewport {
+  width: 100%;
+}
+
 .c-img--viewport--about {
   flex-shrink: 0;
 }
@@ -58,17 +62,18 @@
 }
 
 .c-img--concept {
-  width: 200px;
+  min-width: 200px;
+  width: 100%;
   height: auto;
   object-fit: cover;
+  object-position: 45% 80%;
   position: relative;
-  left: -50px;
+  transform: translateX(-40px);
 }
 
 .c-img--concept--right {
   left: auto;
-  right: -40px;
-  max-width: none;
+  transform: translateX(40px);
 }
 
 .c-img--about {
@@ -106,9 +111,11 @@
 }
 
 .c-img--party {
-  width: 220px;
-  height: 220px;
+  max-width: 220px;
+  width: clamp(120px, 35%, 220px);
+  height: auto;
   object-fit: cover;
+  flex-shrink: 1;
 }
 
 .c-img--monoLogo {

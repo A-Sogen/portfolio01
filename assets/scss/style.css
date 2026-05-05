@@ -321,6 +321,10 @@ body {
      object-fit: contain;
 }
 
+.c-img--viewport {
+  width: 100%;
+}
+
 .c-img--viewport--about {
   flex-shrink: 0;
 }
@@ -333,18 +337,20 @@ body {
 }
 
 .c-img--concept {
-  width: 200px;
+  min-width: 200px;
+  width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 45% 80%;
+     object-position: 45% 80%;
   position: relative;
-  left: -50px;
+  transform: translateX(-40px);
 }
 
 .c-img--concept--right {
   left: auto;
-  right: -40px;
-  max-width: none;
+  transform: translateX(40px);
 }
 
 .c-img--about {
@@ -384,10 +390,12 @@ body {
 }
 
 .c-img--party {
-  width: 220px;
-  height: 220px;
+  max-width: 220px;
+  width: clamp(120px, 35%, 220px);
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  flex-shrink: 1;
 }
 
 .c-img--monoLogo {
@@ -480,12 +488,12 @@ body {
 
 .c-text--concept {
   text-align: left;
-  font-size: 40px;
+  font-size: max(2vw, 30px);
   padding-right: 10px;
 }
 
 .c-text--conceptNumber {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .c-text--about {
@@ -1003,7 +1011,7 @@ body {
 .p-section__inner {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 100px;
 }
 
 .p-section__text {
@@ -1034,6 +1042,8 @@ body {
 
 .p-section__concept {
   display: flex;
+  flex: 1;
+  overflow: visible;
 }
 
 .p-section--textBox {
@@ -1043,7 +1053,6 @@ body {
   justify-content: flex-start;
   writing-mode: vertical-rl;
   padding-left: 50px;
-  flex: 1;
 }
 
 .p-section__button {

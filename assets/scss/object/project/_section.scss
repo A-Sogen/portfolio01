@@ -18,7 +18,7 @@
 .p-section__inner {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 100px;
 }
 
 .p-section__text {
@@ -50,6 +50,8 @@
 
 .p-section__concept {
   display: flex;
+  flex: 1;
+  overflow: visible;
 }
 
 .p-section--textBox {
@@ -59,7 +61,6 @@
   justify-content: flex-start;
   writing-mode: vertical-rl;
   padding-left: 50px;
-  flex: 1;
 }
 
 .p-section__button {
