@@ -62,7 +62,7 @@ window.addEventListener("load", () => {
         1
       );
 
-      hero.style.transform = `scale(${0.6 + heroProgress * 0.4})`;
+      hero.style.transform = `scale(${0.5 + heroProgress * 0.5})`;
 
       // ===== subHero =====
       const subRect = subHero.getBoundingClientRect();

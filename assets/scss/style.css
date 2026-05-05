@@ -305,7 +305,7 @@ body {
 .c-img--hero,
 .c-img--subHero {
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -456,7 +456,12 @@ body {
 }
 
 .c-text--main {
-  font-size: 30px;
+  font-size: 40px;
+  text-shadow: 0 3px 10px rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
 }
 
 .c-text--ContentsTitle {
@@ -935,7 +940,7 @@ body {
   z-index: 2;
 }
 
-.p-mainWrap {
+.p-hero {
   overflow: hidden;
   position: relative;
 }

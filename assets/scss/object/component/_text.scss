@@ -35,7 +35,12 @@
 }
 
 .c-text--main {
-  font-size: 30px;
+  font-size: 40px;
+  text-shadow: 0 3px 10px rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
 }
 
 .c-text--ContentsTitle {
