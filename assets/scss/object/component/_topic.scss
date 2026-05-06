@@ -7,6 +7,11 @@
   align-items: center;
   width: 50%;
   position: relative;
+  border-bottom: #ccc 1px solid;
+
+  @include sp {
+    width: 100%;
+  }
 }
 
 .c-topic__container {
@@ -18,6 +23,12 @@
 .c-topic__img {
   width: 80px;
   height: 80px;
+
+  @include sp {
+    max-width: 140px;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .c-topic__text {

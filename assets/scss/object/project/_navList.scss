@@ -2,4 +2,8 @@
 
 .p-navList {
   padding-right: 10px;
+
+  @include sp {
+    display: none;
+  }
 }
