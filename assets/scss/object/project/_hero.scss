@@ -2,5 +2,11 @@
 
 .p-hero {
   overflow: hidden;
-  position: relative;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.p-heroWrapper {
+  height: 200vh;
 }

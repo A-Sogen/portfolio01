@@ -36,9 +36,11 @@
 
 .c-img--hero,
 .c-img--subHero {
-  width: 100%;
   height: 100%;
   object-fit: cover;
+  transform-origin: center bottom;
+  display: block;
+  margin: 0 auto;
 
   @include sp {
     height: 120vh;

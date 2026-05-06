@@ -50,30 +50,50 @@ window.addEventListener("load", () => {
    * スクロールで画像拡大
    */
   function scrollZoom() {
-    const hero = document.querySelector(".c-img--hero");
-    const subHero = document.querySelector(".c-img--subHero");
+    const heroWrapper = document.querySelector(".js-scrollWrapper");
+    const hero = document.querySelector(".js-scroll-image");
+
+    const subWrapper = document.querySelector(".js-subHeroWrapper");
+    const subHero = document.querySelector(".js-subHeroImage");
+
+    // 初期状態
+    hero.style.width = "50%";
+    hero.style.transform = "scale(0.9)";
+
+    subHero.style.width = "50%";
+    subHero.style.transform = "scale(0.9)";
 
     lenis.on("scroll", () => {
-
       // ===== hero =====
-      const heroRect = hero.getBoundingClientRect();
-      const heroProgress = Math.min(
-        Math.max((window.innerHeight - heroRect.top) / window.innerHeight, 0),
-        1
-      );
+      // ラッパーのtopがどれだけマイナスになったかで進捗を算出（0→1）
+      const wrapperTop = heroWrapper.getBoundingClientRect().top;
+      const heroProgress = Math.min(Math.max(-wrapperTop / window.innerHeight, 0), 1);
 
-      hero.style.transform = `scale(${0.5 + heroProgress * 0.5})`;
+      // width: 50% → 100%
+      const width = 50 + heroProgress * 50;
+      // scale: 0.9 → 1.1
+      const scale = 0.9 + heroProgress * 0.2;
+
+      hero.style.width = `${width}%`;
+      hero.style.transform = `scale(${scale})`;
 
       // ===== subHero =====
-      const subRect = subHero.getBoundingClientRect();
+      const subTop = subWrapper.getBoundingClientRect().top;
       const subProgress = Math.min(
-        Math.max((window.innerHeight - subRect.top) / window.innerHeight, 0),
+        Math.max(-subTop / window.innerHeight, 0),
         1
       );
 
-      subHero.style.transform = `scale(${0.6 + subProgress * 0.4})`;
+      // width: 50% → 100%
+      const subWidth = 50 + subProgress * 50;
+      // scale: 0.9 → 1.1
+      const subScale = 0.9 + subProgress * 0.2;
+
+      subHero.style.width = `${subWidth}%`;
+      subHero.style.transform = `scale(${subScale})`;
     });
   }
+
 
   /**
    * スクロールしたときの画像位置固定？？
@@ -104,27 +124,29 @@ window.addEventListener("load", () => {
    * フッターの画像
    */
   function slideImage() {
-    const track = document.querySelectorAll('.js-footerImage__row');
+    const track = document.querySelectorAll(".js-footerImage__row");
 
-    track.forEach((item) => {
-
+    track.forEach((item, index) => {
       item.innerHTML += item.innerHTML;
 
-      let y = 0;
+      const isReverse = index % 2 === 1;
+      let y = isReverse ? item.scrollHeight / 2 : 0;
       const speed = 1;
 
       function animate() {
-        y += speed;
-
-        if (y >= item.scrollHeight / 2) {
-          y = 0;
+        if (isReverse) {
+          y -= speed;
+          if (y <= 0) y = item.scrollHeight / 2;
+        } else {
+          y += speed;
+          if (y >= item.scrollHeight / 2) y = 0;
         }
 
         item.style.transform = `translateY(-${y}px)`;
         requestAnimationFrame(animate);
       }
       animate();
-    })
+    });
   }
 
   /**
@@ -149,4 +171,5 @@ window.addEventListener("load", () => {
   scrollZoom();
   link();
   imageScrollInside();
+  changeButtonText();
 });
