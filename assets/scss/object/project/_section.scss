@@ -33,7 +33,7 @@
 
   @include sp {
     width: 100%;
-    display: contents;
+    max-width: none;
   }
 }
 

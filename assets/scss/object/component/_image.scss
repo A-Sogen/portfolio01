@@ -63,6 +63,7 @@
 .c-img--section {
   @include sp {
     order: 1;
+    max-height: 70px;
   }
 }
 

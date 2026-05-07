@@ -370,6 +370,7 @@ body {
 @media screen and (max-width: 767px) {
   .c-img--section {
     order: 1;
+    max-height: 70px;
   }
 }
 
@@ -541,6 +542,7 @@ body {
 @media screen and (max-width: 767px) {
   .c-text--section {
     order: 2;
+    font-size: 1.3rem;
   }
 }
 
@@ -1145,7 +1147,7 @@ body {
 @media screen and (max-width: 767px) {
   .p-section__text {
     width: 100%;
-    display: contents;
+    max-width: none;
   }
 }
 
