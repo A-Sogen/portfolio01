@@ -5,7 +5,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
-  width: 250px
+  width: 250px;
+
+  @include sp {
+    width: 80%;
+  }
 }
 
 .p-tagList li {

@@ -88,15 +88,21 @@
 }
 
 .c-img--concept {
-  min-width: 200px;
+  max-width: 600px;
   object-fit: cover;
   object-position: 45% 80%;
   --x: -40px;
   --y: var(--parallax);
+
+  @include sp {
+    max-width: 100%;
+  }
 }
 
 .c-img--concept--right {
   --x: 40px;
+  position: absolute;
+  right: 0;
 }
 
 .c-img--about {

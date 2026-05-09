@@ -396,7 +396,7 @@ body {
 }
 
 .c-img--concept {
-  min-width: 200px;
+  max-width: 600px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 45% 80%;
@@ -404,9 +404,16 @@ body {
   --x: -40px;
   --y: var(--parallax);
 }
+@media screen and (max-width: 767px) {
+  .c-img--concept {
+    max-width: 100%;
+  }
+}
 
 .c-img--concept--right {
   --x: 40px;
+  position: absolute;
+  right: 0;
 }
 
 .c-img--about {
@@ -542,7 +549,7 @@ body {
 @media screen and (max-width: 767px) {
   .c-text--section {
     order: 2;
-    font-size: 1.3rem;
+    font-size: max(1.3rem, 10px);
   }
 }
 
@@ -570,7 +577,7 @@ body {
 
 .c-text--concept {
   text-align: left;
-  font-size: max(2vw, 30px);
+  font-size: max(2vw, 22px);
   padding-right: 10px;
 }
 
@@ -1135,6 +1142,17 @@ body {
 @media screen and (max-width: 767px) {
   .p-section__inner {
     flex-direction: column;
+    gap: 0;
+  }
+}
+
+.p-section__info {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 767px) {
+  .p-section__info {
+    display: contents;
   }
 }
 
@@ -1155,6 +1173,15 @@ body {
   align-items: flex-end;
 }
 
+@media screen and (max-width: 767px) {
+  .p-section__button--fair {
+    order: 3;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
+
 .p-section__contentsWrap {
   display: flex;
   gap: 15px;
@@ -1162,7 +1189,8 @@ body {
 @media screen and (max-width: 767px) {
   .p-section__contentsWrap {
     width: 100%;
-    order: 3;
+    order: 2;
+    overflow-x: auto;
   }
 }
 
@@ -1175,13 +1203,18 @@ body {
   opacity: 1;
   transform: translateX(0);
 }
+@media screen and (max-width: 767px) {
+  .p-section__content {
+    flex: 0 0 70%;
+  }
+}
 
 .p-section__concept {
   display: flex;
   flex: 1;
   overflow: hidden;
   position: relative;
-  min-height: 700px;
+  justify-content: space-between;
 }
 
 .p-section--textBox {
@@ -1190,7 +1223,11 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
   writing-mode: vertical-rl;
-  padding-left: 50px;
+  flex: 1;
+}
+
+.p-section--textBoxLeft {
+  justify-content: end;
 }
 
 .p-section__button {
@@ -1253,6 +1290,11 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
   width: 250px;
+}
+@media screen and (max-width: 767px) {
+  .p-tagList {
+    width: 80%;
+  }
 }
 
 .p-tagList li {
