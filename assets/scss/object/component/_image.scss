@@ -69,15 +69,19 @@
 
 .c-img--concept,
 .c-img--viewport {
-  width: 100%;
+  width: auto;
   --parallax: 0px;
-  height: 120%;
+  height: 100%;
   transform: translateY(var(--parallax));
   inset: -10% 0;
 }
 
 .c-img--section--concept {
   min-width: 80px;
+
+  @include sp {
+    max-width: 300px;
+  }
 }
 
 .c-img--viewport--about {
@@ -99,11 +103,13 @@
 
   @include sp {
     max-width: 100%;
+    padding-top: 30px;
   }
 }
 
 .c-img--concept--right {
   --x: 40px;
+  aspect-ratio: 1 / 1;
 }
 
 .c-img--about {
@@ -126,7 +132,6 @@
 }
 
 .c-img--concept,
-.c-img--viewport,
 .c-img--about,
 .c-img--columnImage {
   height: 100%;

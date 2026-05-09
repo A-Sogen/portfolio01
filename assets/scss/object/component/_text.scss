@@ -57,12 +57,22 @@
   }
 }
 
+.c-text--section--right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .c-text--section--largeSpace {
   padding: 120px 0 50px;
 }
 
 .c-text--sectionLine {
   padding-bottom: 10px;
+
+  @include sp {
+    padding-bottom: 30px;
+  }
 }
 
 .c-text--sectionTitle {
@@ -81,7 +91,7 @@
 
 .c-text--concept {
   text-align: left;
-  font-size: clamp(25px, 3vw, 40px);
+  font-size: clamp(30px, 3vw, 40px);
   padding-right: 10px;
 }
 
