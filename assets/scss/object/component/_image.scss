@@ -99,7 +99,7 @@
 
   @include sp {
     max-width: 100%;
-    padding-top: 30px;
+    height: 130%;
   }
 
   &.-inset-50 {
@@ -116,7 +116,6 @@
 
     @include sp {
       height: auto;
-      max-height: 300px;
       aspect-ratio: 3 / 4;
       position: static;
       width: 100%;

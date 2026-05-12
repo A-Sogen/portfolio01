@@ -439,7 +439,7 @@ body {
 @media screen and (max-width: 767px) {
   .c-img--concept {
     max-width: 100%;
-    padding-top: 30px;
+    height: 130%;
   }
 }
 .c-img--concept.-inset-50 {
@@ -457,7 +457,6 @@ body {
 @media screen and (max-width: 767px) {
   .c-img--concept.-bottom {
     height: auto;
-    max-height: 300px;
     aspect-ratio: 3/4;
     position: static;
     width: 100%;
@@ -617,6 +616,7 @@ body {
   .c-text--section {
     order: 2;
     font-size: max(1.3rem, 10px);
+    margin: 20px 0;
   }
 }
 
@@ -637,7 +637,7 @@ body {
 @media screen and (max-width: 767px) {
   .c-text--sectionLine {
     padding-bottom: 30px;
-    font-size: 13px;
+    font-size: 17px;
   }
 }
 
@@ -665,7 +665,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .c-text--concept {
-    font-size: 18px;
+    font-size: 35px;
   }
 }
 
@@ -674,7 +674,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .c-text--conceptNumber {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
@@ -1271,11 +1271,22 @@ body {
 .p-parallax.-full {
   height: 120vh;
 }
+@media screen and (max-width: 767px) {
+  .p-parallax.-full {
+    height: 100vh;
+    margin-top: 40px;
+  }
+}
 
 .p-parallax--right {
   width: 70%;
   margin-left: auto;
   height: auto;
+}
+@media screen and (max-width: 767px) {
+  .p-parallax--right {
+    width: 100%;
+  }
 }
 
 .p-parallax--right .c-img--viewport {
@@ -1353,6 +1364,7 @@ body {
   .p-section__inner--concept {
     display: flex;
     justify-content: end;
+    margin-bottom: 40px;
   }
 }
 
@@ -1438,7 +1450,6 @@ body {
 }
 @media screen and (max-width: 767px) {
   .p-section__concept {
-    margin-top: 70px;
     flex-direction: row-reverse;
     align-items: flex-start;
     width: 100%;
@@ -1447,6 +1458,7 @@ body {
 
 .p-section__concept--row {
   flex-direction: row;
+  margin-top: 50px;
 }
 
 .p-section--textBox {

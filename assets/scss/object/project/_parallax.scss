@@ -9,12 +9,23 @@
   &.-full {
     height: 120vh;
   }
+
+  @include sp {
+    &.-full {
+      height: 100vh;
+      margin-top: 40px;
+    }
+  }
 }
 
 .p-parallax--right {
   width: 70%;
   margin-left: auto;
   height: auto;
+
+  @include sp {
+    width: 100%;
+  }
 }
 
 .p-parallax--right .c-img--viewport {
