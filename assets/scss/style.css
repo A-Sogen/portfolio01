@@ -100,6 +100,11 @@ body {
   display: block;
   align-items: flex-start;
 }
+@media screen and (max-width: 767px) {
+  .c-arrow--event {
+    display: none;
+  }
+}
 
 .c-backTop {
   position: absolute;

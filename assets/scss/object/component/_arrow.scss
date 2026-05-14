@@ -25,4 +25,8 @@
   transform: translateX(-10px);
   display: block;
   align-items: flex-start;
+
+  @include sp {
+    display: none;
+  }
 }
