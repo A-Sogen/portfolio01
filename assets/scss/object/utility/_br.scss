@@ -1,0 +1,9 @@
+@use '../../foundation/mixin' as *;
+
+.u-spBr {
+  display: none;
+
+  @include sp {
+    display: block;
+  }
+}

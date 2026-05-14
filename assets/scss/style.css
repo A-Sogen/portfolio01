@@ -206,9 +206,14 @@ body {
     width: 45%;
   }
 }
+@media screen and (max-width: 767px) {
+  .c-btn--footerButton.-sp {
+    width: 30%;
+  }
+}
 
 .c-btn--footerButton--sizeM {
-  min-width: 170px;
+  width: 100%;
 }
 
 .c-btn--footerButton--others {
@@ -270,7 +275,7 @@ body {
 
 .c-btn--default--primary {
   display: block;
-  font-size: 15px;
+  font-size: max(1rem, 14px);
 }
 
 .c-btn--hover {
@@ -601,11 +606,13 @@ body {
   transform: translate(-50%, -30%);
   font-weight: 700;
   letter-spacing: -4px;
+  white-space: nowrap;
 }
 @media screen and (max-width: 767px) {
   .c-text--main {
     font-size: 26px;
     top: 22%;
+    white-space: normal;
   }
 }
 
@@ -652,6 +659,11 @@ body {
   min-height: 105px;
   font-weight: 700;
   letter-spacing: -1px;
+}
+@media screen and (max-width: 767px) {
+  .c-text--sectionTitle {
+    text-align: center;
+  }
 }
 
 .c-text--schedule {
@@ -732,6 +744,12 @@ body {
   left: 50%;
   top: 30%;
   transform: translate(-50%, -30%);
+}
+@media screen and (max-width: 767px) {
+  .c-text--subHero {
+    font-size: clamp(15px, 3.5vw, 30px);
+    white-space: normal;
+  }
 }
 
 .c-text--label {
@@ -1004,6 +1022,13 @@ body {
   gap: 10px;
   width: 100%;
 }
+@media screen and (max-width: 767px) {
+  .p-buttonWrap {
+    padding: 0 30px;
+    gap: 40px;
+    order: 4;
+  }
+}
 
 .p-footerContents {
   position: absolute;
@@ -1060,6 +1085,11 @@ body {
   flex-direction: column;
   flex: 1;
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .p-footerImage__row.-sp {
+    display: none;
+  }
 }
 
 .p-headerWrap {
@@ -1702,6 +1732,15 @@ body {
 /*// -----------------------------------------------------------------
 // Utility
 // -----------------------------------------------------------------*/
+.u-spBr {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .u-spBr {
+    display: block;
+  }
+}
+
 .u-color-white {
   color: white;
 }

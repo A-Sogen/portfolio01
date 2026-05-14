@@ -50,10 +50,12 @@
   transform: translate(-50%, -30%);
   font-weight: 700;
   letter-spacing: -4px;
+  white-space: nowrap;
 
   @include sp {
     font-size: 26px;
     top: 22%;
+    white-space: normal;
   }
 }
 
@@ -98,6 +100,10 @@
   min-height: 105px;
   font-weight: 700;
   letter-spacing: -1px;
+
+  @include sp {
+    text-align: center;
+  }
 }
 
 .c-text--schedule {
@@ -173,6 +179,11 @@
   left: 50%;
   top: 30%;
   transform: translate(-50%, -30%);
+
+  @include sp {
+    font-size: clamp(15px, 3.5vw, 30px);
+    white-space: normal
+  }
 }
 
 .c-text--label {

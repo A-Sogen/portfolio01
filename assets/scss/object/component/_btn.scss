@@ -76,10 +76,16 @@
       width: 45%;
     }
   }
+
+  &.-sp {
+    @include sp {
+      width: 30%;
+    }
+  }
 }
 
 .c-btn--footerButton--sizeM {
-  min-width: 170px;
+  width: 100%;
 }
 
 .c-btn--footerButton--others {
@@ -140,7 +146,7 @@
 
 .c-btn--default--primary {
   display: block;
-  font-size: 15px;
+  font-size: max(1rem, 14px);
 }
 
 .c-btn--hover {
