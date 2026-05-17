@@ -8,7 +8,15 @@
 
   @include sp {
     font-size: clamp(10px, 4vw, 20px);
-    padding-top: 0;
+    padding-top: 20px;
+
+    &.-sp {
+      padding-top: 0;
+    }
+
+    &.-cafe {
+      justify-content: end;
+    }
   }
 }
 

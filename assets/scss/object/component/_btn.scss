@@ -60,7 +60,11 @@
   }
 
   &.-aboutContents {
-    width: 30%;
+    width: 60%;
+
+    @include sp {
+      width: 30%;
+    }
   }
 
   @include sp {
@@ -150,7 +154,11 @@
 
 .c-btn--default--primary {
   display: block;
-  font-size: clamp(10px,4vw,14px);
+  font-size: clamp(10px, 4vw, 14px);
+
+  @include tab {
+    font-size: clamp(10px, 3vw, 12px);
+  }
 }
 
 .c-btn--hover {

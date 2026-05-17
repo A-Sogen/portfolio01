@@ -85,7 +85,7 @@
 }
 
 .c-text--sectionLine {
-  font-size: 18px;
+  font-size: clamp(15px, 2vw, 18px);
   font-weight: 700;
   letter-spacing: -0.1px;
 
@@ -167,6 +167,10 @@
   letter-spacing: -2px;
   line-height: 1.2;
 
+  @include tab {
+    font-size: clamp(20px, 4vw, 25px);
+  }
+
   @include sp {
     font-size: clamp(20px, 4vw, 30px);
     letter-spacing: 0;
@@ -223,6 +227,10 @@
   letter-spacing: -1px;
   font-size: 18px;
 
+  @include tab {
+    font-size: clamp(10px, 5vw, 15px);
+  }
+
   @include sp {
     font-size: clamp(10px, 5vw, 17px);
   }
@@ -231,6 +239,10 @@
 .c-text--sectionLead {
   font-size: 24px;
   padding-bottom: 35px;
+
+  @include  sp {
+    font-size: clamp(18px, 5vw, 20px);
+  }
 }
 
 .c-text--sectionText {
@@ -246,6 +258,10 @@
   color: #fff;
   padding-top: 60px;
   font-size: 30px;
+
+  @include sp {
+    font-size: 20px;
+  }
 }
 
 .c-text--footer {

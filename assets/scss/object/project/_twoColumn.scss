@@ -31,7 +31,7 @@
   justify-content: center;
 
   @include sp {
-    font-size: 12px;
+    font-size: clamp(10px, 4vw, 20px);
   }
 }
 
@@ -82,6 +82,12 @@
 
   @include sp {
     margin-top: 0;
+  }
+
+  &.-footer {
+    @include sp {
+      margin-top: 20px;
+    }
   }
 }
 

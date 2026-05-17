@@ -167,6 +167,10 @@
   display: block;
   height: 400px;
 
+  @include tab {
+    height: 300px;
+  }
+
   @include sp {
     width: 100%;
     min-height: 200px;

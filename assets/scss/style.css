@@ -195,7 +195,12 @@ body {
   min-width: 100%;
 }
 .c-btn--footerButton.-aboutContents {
-  width: 30%;
+  width: 60%;
+}
+@media screen and (max-width: 767px) {
+  .c-btn--footerButton.-aboutContents {
+    width: 30%;
+  }
 }
 @media screen and (max-width: 767px) {
   .c-btn--footerButton {
@@ -287,6 +292,11 @@ body {
   display: block;
   font-size: clamp(10px, 4vw, 14px);
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .c-btn--default--primary {
+    font-size: clamp(10px, 3vw, 12px);
+  }
+}
 
 .c-btn--hover {
   position: absolute;
@@ -339,7 +349,13 @@ body {
 @media screen and (max-width: 767px) {
   .c-contentsTitle {
     font-size: clamp(10px, 4vw, 20px);
+    padding-top: 20px;
+  }
+  .c-contentsTitle.-sp {
     padding-top: 0;
+  }
+  .c-contentsTitle.-cafe {
+    justify-content: end;
   }
 }
 
@@ -535,6 +551,11 @@ body {
   display: block;
   height: 400px;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .c-img--others {
+    height: 300px;
+  }
+}
 @media screen and (max-width: 767px) {
   .c-img--others {
     width: 100%;
@@ -689,7 +710,7 @@ body {
 }
 
 .c-text--sectionLine {
-  font-size: 18px;
+  font-size: clamp(15px, 2vw, 18px);
   font-weight: 700;
   letter-spacing: -0.1px;
 }
@@ -777,6 +798,11 @@ body {
   letter-spacing: -2px;
   line-height: 1.2;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .c-text--columnTopic {
+    font-size: clamp(20px, 4vw, 25px);
+  }
+}
 @media screen and (max-width: 767px) {
   .c-text--columnTopic {
     font-size: clamp(20px, 4vw, 30px);
@@ -836,6 +862,11 @@ body {
   letter-spacing: -1px;
   font-size: 18px;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .c-text--photoText {
+    font-size: clamp(10px, 5vw, 15px);
+  }
+}
 @media screen and (max-width: 767px) {
   .c-text--photoText {
     font-size: clamp(10px, 5vw, 17px);
@@ -845,6 +876,11 @@ body {
 .c-text--sectionLead {
   font-size: 24px;
   padding-bottom: 35px;
+}
+@media screen and (max-width: 767px) {
+  .c-text--sectionLead {
+    font-size: clamp(18px, 5vw, 20px);
+  }
 }
 
 .c-text--sectionText {
@@ -861,6 +897,11 @@ body {
   color: #fff;
   padding-top: 60px;
   font-size: 30px;
+}
+@media screen and (max-width: 767px) {
+  .c-text--footerLead {
+    font-size: 20px;
+  }
 }
 
 .c-text--footer {
@@ -1471,7 +1512,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .p-section--wrap {
-    margin: 60px 0 0;
+    margin: 30px 0 0;
   }
 }
 
@@ -1768,7 +1809,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .p-twoColumn__title {
-    font-size: 12px;
+    font-size: clamp(10px, 4vw, 20px);
   }
 }
 
@@ -1821,6 +1862,11 @@ body {
 @media screen and (max-width: 767px) {
   .p-twoColumn__buttons--others {
     margin-top: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-twoColumn__buttons--others.-footer {
+    margin-top: 20px;
   }
 }
 
