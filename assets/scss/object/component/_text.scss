@@ -91,6 +91,7 @@
 
   @include sp {
     padding-bottom: 30px;
+    font-size: clamp(13px, 3.5vw, 20px);
   }
 }
 
@@ -101,6 +102,10 @@
   min-height: 105px;
   font-weight: 700;
   letter-spacing: -1px;
+
+  @include sp {
+    font-size: clamp(13px, 3.5vw, 20px);
+  }
 }
 
 .c-text--schedule {

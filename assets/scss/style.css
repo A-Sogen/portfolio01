@@ -729,6 +729,7 @@ body {
 @media screen and (max-width: 767px) {
   .c-text--sectionLine {
     padding-bottom: 30px;
+    font-size: clamp(13px, 3.5vw, 20px);
   }
 }
 
@@ -739,6 +740,11 @@ body {
   min-height: 105px;
   font-weight: 700;
   letter-spacing: -1px;
+}
+@media screen and (max-width: 767px) {
+  .c-text--sectionTitle {
+    font-size: clamp(13px, 3.5vw, 20px);
+  }
 }
 
 .c-text--schedule {
@@ -1784,12 +1790,18 @@ body {
 
 .p-tagList li {
   border: #ccc 1px solid;
-  font-size: 13px;
+  font-size: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 4px 10px;
   font-weight: 500;
+  white-space: nowrap;
+}
+@media screen and (max-width: 767px) {
+  .p-tagList li {
+    font-size: 13px;
+  }
 }
 
 .p-topics {

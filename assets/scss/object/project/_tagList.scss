@@ -15,10 +15,15 @@
 
 .p-tagList li {
   border: #ccc 1px solid;
-  font-size: 13px;
+  font-size: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 4px 10px;
   font-weight: 500;
+  white-space: nowrap;
+
+  @include sp {
+    font-size: 13px;
+  }
 }
