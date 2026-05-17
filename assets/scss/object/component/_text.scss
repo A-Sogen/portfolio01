@@ -121,6 +121,7 @@
   line-height: 1.5;
   font-weight: 700;
   width: 100%;
+  white-space: nowrap;
 
   @include sp {
     font-size: clamp(20px, 8vw, 30px);
