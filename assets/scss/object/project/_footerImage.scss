@@ -7,6 +7,14 @@
   max-height: 80vh;
   background-color: #7e7d83;
   gap: 10px;
+
+  @include tab {
+    max-height: 60vh;
+  }
+
+  @include sp {
+    max-height: 50vh;
+  }
 }
 
 .p-footerImage__row {

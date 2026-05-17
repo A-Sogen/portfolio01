@@ -1,3 +1,5 @@
+@use '../../foundation/mixin' as *;
+
 .c-backTop {
   position: absolute;
   top: 70%;
@@ -15,6 +17,10 @@
     height: 1px;
     background-color: #fff;
     transform: translate(-50%, -50%);
+
+    @include sp {
+      width: 50px;
+    }
   }
 
   &::after {
@@ -27,5 +33,11 @@
     border-top: 1px solid #fff;
     border-left: 1px solid #fff;
     transform: translateX(-50%) rotate(45deg);
+
+    @include sp {
+      width: 30px;
+      height: 30px;
+      top: 110%;
+    }
   }
 }
